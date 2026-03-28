@@ -1,0 +1,123 @@
+/*----------Slider Section----------*/
+
+.swiper-main-slider {
+  width: 100%;
+  position: relative;
+  background-color: rgb(18, 54, 58);
+  overflow: visible;
+  z-index: 10;
+  clip-path: inset(0 0 -300px 0);
+}
+
+.swiper-main-slider-wrapper {
+  position: relative;
+  overflow: visible;
+}
+
+.swiper-main-slider-slide {
+  position: relative;
+  overflow: visible;
+}
+
+.custom-slider-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+  overflow: hidden;
+  background-image:
+    radial-gradient(ellipse at 50% 0%,
+      rgba(255, 255, 255, 0.1) 0%,
+      transparent 60%),
+    radial-gradient(ellipse at 50% 100%,
+      rgba(255, 0, 0, 0.1) 0%,
+      transparent 40%),
+    radial-gradient(circle at 10% 15%,
+      rgba(0, 20, 70, 0.1) 0%,
+      transparent 35%),
+    radial-gradient(circle at 10% 85%,
+      rgba(0, 20, 70, 0.5) 0%,
+      transparent 35%),
+    radial-gradient(circle at 90% 10%,
+      rgba(0, 20, 70, 0.1) 0%,
+      transparent 40%),
+    radial-gradient(circle at 90% 85%,
+      rgba(0, 20, 70, 0.5) 0%,
+      transparent 40%);
+}
+
+.custom-slider-overlay::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 2;
+  overflow: hidden;
+  background-image: repeating-linear-gradient(90deg,
+      rgba(255, 255, 255, 0.03) 0,
+      rgba(255, 255, 255, 0.03) 1px,
+      transparent 1px,
+      transparent 50px),
+    repeating-linear-gradient(0deg,
+      rgba(255, 255, 255, 0.03) 0,
+      rgba(255, 255, 255, 0.03) 1px,
+      transparent 1px,
+      transparent 50px);
+  -webkit-mask-image: radial-gradient(ellipse at center,
+      white 50%,
+      transparent 100%);
+  mask-image: radial-gradient(ellipse at center, white 50%, transparent 100%);
+}
+
+.slide-content {
+  position: relative;
+  z-index: 10;
+  margin-top: calc(var(--navbar-h) + (var(--post-gap-2xl) * 2));
+  padding-bottom: calc((var(--navbar-h) + var(--post-gap-2xl)));
+}
+
+.slider-background-text {
+  position: absolute;
+  line-height: 1.1;
+  top: 0;
+  left: 10rem;
+}
+
+.slide-content-card {
+  padding: var(--post-gap-2xl);
+  max-width: clamp(300px, 22vw, 500px);
+  width: 100%;
+  aspect-ratio: 6/7;
+  background-color: color-mix(in srgb, var(--post-c3) 50%, transparent 50%);
+  border-radius: var(--post-rounded-2xl);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--post-c3);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+  position: relative;
+  bottom: -5rem;
+}
+
+.slide-mascot-img {
+  transform: translate(-50px, -50px);
+  width: 100%;
+  max-width: clamp(240px, 24vw, 480px);
+  scale: 1.8;
+  transition: 0.3s ease all;
+}
+
+.slide-mascot-img:hover {
+  transform: translate(-50px, 0px);
+  filter: drop-shadow(0 0 10px var(--post-c5));
+  scale: 1.6;
+}
+
+/*----------Slider Section End----------*/

@@ -1,0 +1,928 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ana Sayfa</title>
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="custom-css/root/root.css" />
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-xl fixed-top">
+    <div class="custom-container">
+      <div class="custom-navbar homepage">
+        <!-- Logo -->
+        <a class="navbar-brand" href="index.html">
+          <img src="assets/logo.svg" class="size-4xl" alt="" />
+          <img src="assets/logo-2.svg" class="size-4xl ms-2" alt="" />
+        </a>
+
+        <!-- Menu Button -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+          aria-controls="offcanvasNavbar">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Navbar Menu -->
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link active" href="index.html">Ana Sayfa</a>
+            </li>
+
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="about.html">Kurumsal</a>
+
+              <ul class="dropdown-menu custom-hover-dropdown-menu">
+                <li><a class="dropdown-item" href="#">Firma Profili</a></li>
+                <li><a class="dropdown-item" href="#">Vizyon</a></li>
+                <li><a class="dropdown-item" href="#">Misyon</a></li>
+                <li>
+                  <a class="dropdown-item" href="#">Kalite Politikası</a>
+                </li>
+              </ul>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="products.html">Ürünler</a>
+            </li>
+
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="media.html">Medya</a>
+
+              <ul class="dropdown-menu custom-hover-dropdown-menu">
+                <li><a class="dropdown-item" href="#">Fotoğraflar</a></li>
+                <li><a class="dropdown-item" href="#">Videolar</a></li>
+              </ul>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">İletişim</a>
+            </li>
+
+            <!-- Language Switcher Dropdown -->
+            <li class="nav-item dropdown">
+              <a class="nav-link language-switcher" role="button" data-bs-toggle="dropdown" aria-expanded="false"
+                href="#">
+                <img src="assets/flags/turkey.webp" class="img-fluid size-sm" alt="" />
+              </a>
+
+              <div class="language-switcher dropdown-menu">
+                <div class="d-flex flex-column">
+                  <a class="nav-link" href="#">
+                    <img src="assets/flags/united-kingdom.webp" class="img-fluid size-sm" alt="" /></a>
+                  <a class="nav-link" href="#">
+                    <img src="assets/flags/russia.webp" class="img-fluid size-sm" alt="" /></a>
+                  <a class="nav-link" href="#">
+                    <img src="assets/flags/germany.webp" class="img-fluid size-sm" alt="" /></a>
+                </div>
+              </div>
+            </li>
+            <!-- Language Switcher Dropdown End -->
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Offcanvas Mobile Menu -->
+  <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+    <div class="custom-container navbar-h">
+      <a class="navbar-brand" href="#">
+        <img src="assets/logo.svg" class="size-4xl" alt="" />
+        <img src="assets/logo-2-dark.svg" class="size-4xl ms-2" alt="" />
+      </a>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+      <ul class="navbar-nav mb-5">
+        <li class="nav-item">
+          <a class="nav-link text-c4 fw-semibold fs-md" href="#">
+            <svg class="" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
+              viewBox="0 0 24 24">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="m9 5 7 7-7 7" />
+            </svg>
+            Ana Sayfa</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-c4 fw-semibold fs-md" href="#">
+            <svg class="" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
+              viewBox="0 0 24 24">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="m9 5 7 7-7 7" />
+            </svg>
+            Kurumsal</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-c4 fw-semibold fs-md" href="#">
+            <svg class="" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
+              viewBox="0 0 24 24">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="m9 5 7 7-7 7" />
+            </svg>
+            Ürünler</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-c4 fw-semibold fs-md" href="#">
+            <svg class="" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
+              viewBox="0 0 24 24">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="m9 5 7 7-7 7" />
+            </svg>
+            Kalite</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-c4 fw-semibold fs-md" href="#">
+            <svg class="" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
+              viewBox="0 0 24 24">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="m9 5 7 7-7 7" />
+            </svg>
+            Medya</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-c4 fw-semibold fs-md" href="#">
+            <svg class="" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
+              viewBox="0 0 24 24">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="m9 5 7 7-7 7" />
+            </svg>
+            İletişim</a>
+        </li>
+      </ul>
+      <div class="d-flex flex-column gap-xs">
+        <div class="d-flex gap-xs">
+          <button class="custom-btn-reset rounded-full border-c5 text-c5 w-100">
+            <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none"
+              viewBox="0 0 24 24">
+              <path stroke="currentColor" stroke-linecap="round" stroke-width="2"
+                d="m21 21-3.5-3.5M17 10a7 7 0 1 1-14 0 7 7 0 0 1 14 0Z" />
+            </svg>
+
+            Ürün Ara
+          </button>
+          <button class="custom-btn-reset rounded-full border-c5 text-c5 w-100">
+            <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none"
+              viewBox="0 0 24 24">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M9 10V6a3 3 0 0 1 3-3v0a3 3 0 0 1 3 3v4m3-2 .917 11.923A1 1 0 0 1 17.92 21H6.08a1 1 0 0 1-.997-1.077L6 8h12Z" />
+            </svg>
+            Teklif Al
+          </button>
+        </div>
+        <!-- Language Switcher Dropdown -->
+        <div>
+          <button
+            class="nav-link language-switcher w-100 input-h border-c4 text-c4 justify-content-between bg-transparent px-2"
+            role="button" data-bs-toggle="collapse" data-bs-target="#languageCollapseMenu" aria-expanded="false"
+            aria-controls="languageCollapseMenu" type="button">
+            <img src="assets/flags/turkey.webp" class="img-fluid size-md" alt="" />
+            <span class="fw-semibold fs-md">TR</span>
+            <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none"
+              viewBox="0 0 24 24">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="m19 9-7 7-7-7" />
+            </svg>
+          </button>
+
+          <div class="collapse language-switcher" id="languageCollapseMenu">
+            <div class="d-flex flex-column gap-md">
+              <a class="nav-link text-c4 fw-semibold fs-md gap-sm" href="#">
+                <img src="assets/flags/united-kingdom.webp" class="img-fluid size-md" alt="" />
+                <span>EN</span></a>
+              <a class="nav-link text-c4 fw-semibold fs-md gap-sm" href="#">
+                <img src="assets/flags/russia.webp" class="img-fluid size-md" alt="" />
+                <span>RU</span></a>
+              <a class="nav-link text-c4 fw-semibold fs-md gap-sm" href="#">
+                <img src="assets/flags/germany.webp" class="img-fluid size-md" alt="" />
+                <span>DE</span></a>
+            </div>
+          </div>
+        </div>
+        <!-- Language Switcher Dropdown End -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Slider Section -->
+  <section class="swiper swiper-main-slider">
+    <!-- Overlay -->
+    <div class="custom-slider-overlay"></div>
+    <div class="swiper-wrapper swiper-main-slider-wrapper">
+      <!-- SLIDE 1 -->
+      <div class="swiper-slide swiper-main-slider-slide" data-slide="1">
+        <div class="custom-container">
+          <div class="slide-content d-block d-xl-flex justify-content-between align-items-center w-100">
+            <!-- Left -->
+            <div class="w-100">
+              <!-- Slider Buttons -->
+              <div class="d-none d-xl-flex gap-3 align-items-center mb-5">
+                <p class="solid-text fs-4xl mb-0 opacity-50">01</p>
+                <div class="d-flex align-items-center gap-xs">
+                  <button
+                    class="custom-btn-reset text-c2 border-c2 rounded-full size-3xl opacity-50 swiper-main-slider-slide-prev"
+                    style="padding: var(--post-gap-xs)" aria-label="Önceki slide">
+                    <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
+                      viewBox="0 0 24 24">
+                      <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="m15 19-7-7 7-7" />
+                    </svg>
+                  </button>
+                  <button
+                    class="custom-btn-reset text-c2 border-c2 rounded-full size-3xl opacity-50 swiper-main-slider-slide-next"
+                    style="padding: var(--post-gap-xs)" aria-label="Sonraki slide">
+                    <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
+                      viewBox="0 0 24 24">
+                      <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="m9 5 7 7-7 7" />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+              <!-- Slider Titles -->
+              <p class="text-shadow tracking-text text-c2 fs-lg mb-4">
+                Gücün Kontrol Noktası
+              </p>
+              <p class="text-shadow text-c2 fs-5xl fw-semibold mb-4">
+                Hareketi Yönet,
+                <br />
+                Gücü Yönlendir
+              </p>
+              <a href="#" class="custom-btn-reset text-c2 bg-c4 w-fit mb-5">Kurumsal</a>
+              <!-- Slider Social Icons -->
+              <div class="d-flex align-items-center gap-md mt-auto">
+                <p class="text-shadow tracking-text text-c2 fs-md mb-0">
+                  Bizi Takip Et
+                </p>
+                <div class="d-flex align-items-center gap-sm">
+                  <a href="">
+                    <img src="assets/icons/instagram-light.svg" class="size-sm" alt="" />
+                  </a>
+                  <a href="">
+                    <img src="assets/icons/facebook-light.svg" class="size-sm" alt="" />
+                  </a>
+                  <a href="">
+                    <img src="assets/icons/linkedin-light.svg" class="size-sm" alt="" />
+                  </a>
+                  <a href="">
+                    <img src="assets/icons/twitter-light.svg" class="size-sm" alt="" />
+                  </a>
+                </div>
+              </div>
+            </div>
+            <!-- Right -->
+            <div class="position-relative w-100 d-none d-xl-flex flex-column justify-content-end align-items-end">
+              <p class="text-uppercase solid-text opacity-50 fs-7xl slider-background-text">
+                REDÜK-
+                <br />
+                TÖRLER
+              </p>
+
+              <div class="slide-content-card">
+                <img class="slide-mascot-img" src="assets/ChatGPT Image Jul 21, 2025 at 03_47_06 PM-3 copy@2x.webp"
+                  alt="" />
+                <div>
+                  <p class="tracking-text text-c6 mb-0 fs-lg">REDÜKTÖRLER</p>
+                  <p class="tracking-text text-c6 fw-semibold fs-lg">
+                    GEAR REDUCER
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- SLIDE 2 -->
+      <div class="swiper-slide swiper-main-slider-slide" data-slide="2">
+        <div class="custom-container">
+          <div class="slide-content d-block d-xl-flex justify-content-between align-items-center w-100">
+            <!-- Left -->
+            <div class="w-100">
+              <!-- Slider Buttons -->
+              <div class="d-none d-xl-flex gap-3 align-items-center mb-5">
+                <p class="solid-text fs-4xl mb-0 opacity-50">02</p>
+                <div class="d-flex align-items-center gap-xs">
+                  <button
+                    class="custom-btn-reset text-c2 border-c2 rounded-full size-3xl opacity-50 swiper-main-slider-slide-prev"
+                    style="padding: var(--post-gap-xs)" aria-label="Önceki slide">
+                    <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
+                      viewBox="0 0 24 24">
+                      <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="m15 19-7-7 7-7" />
+                    </svg>
+                  </button>
+                  <button
+                    class="custom-btn-reset text-c2 border-c2 rounded-full size-3xl opacity-50 swiper-main-slider-slide-next"
+                    style="padding: var(--post-gap-xs)" aria-label="Sonraki slide">
+                    <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
+                      viewBox="0 0 24 24">
+                      <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="m9 5 7 7-7 7" />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+              <!-- Slider Titles -->
+              <p class="text-shadow tracking-text text-c2 fs-lg mb-4">
+                Tork Bizim İşimiz
+              </p>
+              <p class="text-shadow text-c2 fs-5xl fw-semibold mb-4">
+                Ağır Yüklerin,
+                <br />
+                Değişmeyen Gücü
+              </p>
+              <a href="#" class="custom-btn-reset text-c2 bg-c4 w-fit mb-5">Kurumsal</a>
+              <!-- Slider Social Icons -->
+              <div class="d-flex align-items-center gap-md mt-auto">
+                <p class="text-shadow tracking-text text-c2 fs-md mb-0">
+                  Bizi Takip Et
+                </p>
+                <div class="d-flex align-items-center gap-sm">
+                  <a href="">
+                    <img src="assets/icons/instagram-light.svg" class="size-sm" alt="" />
+                  </a>
+                  <a href="">
+                    <img src="assets/icons/facebook-light.svg" class="size-sm" alt="" />
+                  </a>
+                  <a href="">
+                    <img src="assets/icons/linkedin-light.svg" class="size-sm" alt="" />
+                  </a>
+                  <a href="">
+                    <img src="assets/icons/twitter-light.svg" class="size-sm" alt="" />
+                  </a>
+                </div>
+              </div>
+            </div>
+            <!-- Right -->
+            <div class="position-relative w-100 d-none d-xl-flex flex-column justify-content-end align-items-end">
+              <p class="text-uppercase solid-text opacity-50 fs-7xl slider-background-text">
+                REDÜK-
+                <br />
+                TÖRLER
+              </p>
+
+              <div class="slide-content-card">
+                <img class="slide-mascot-img" src="assets/redüktör_2@2x.webp" alt="" />
+                <div>
+                  <p class="tracking-text text-c6 mb-0 fs-lg">REDÜKTÖRLER</p>
+                  <p class="tracking-text text-c6 fw-semibold fs-lg">
+                    GEAR REDUCER
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- SLIDE 3 -->
+      <div class="swiper-slide swiper-main-slider-slide" data-slide="3">
+        <div class="custom-container">
+          <div class="slide-content d-block d-xl-flex justify-content-between align-items-center w-100">
+            <!-- Left -->
+            <div class="w-100">
+              <!-- Slider Buttons -->
+              <div class="d-none d-xl-flex gap-3 align-items-center mb-5">
+                <p class="solid-text fs-4xl mb-0 opacity-50">03</p>
+                <div class="d-flex align-items-center gap-xs">
+                  <button
+                    class="custom-btn-reset text-c2 border-c2 rounded-full size-3xl opacity-50 swiper-main-slider-slide-prev"
+                    style="padding: var(--post-gap-xs)" aria-label="Önceki slide">
+                    <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
+                      viewBox="0 0 24 24">
+                      <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="m15 19-7-7 7-7" />
+                    </svg>
+                  </button>
+                  <button
+                    class="custom-btn-reset text-c2 border-c2 rounded-full size-3xl opacity-50 swiper-main-slider-slide-next"
+                    style="padding: var(--post-gap-xs)" aria-label="Sonraki slide">
+                    <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
+                      viewBox="0 0 24 24">
+                      <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="m9 5 7 7-7 7" />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+              <!-- Slider Titles -->
+              <p class="text-shadow tracking-text text-c2 fs-lg mb-4">
+                Hassas Akışın Güvencesi
+              </p>
+              <p class="text-shadow text-c2 fs-5xl fw-semibold mb-4">
+                Akışa Yön Ver,
+                <br />
+                Verimliliği Yükselt
+              </p>
+              <a href="#" class="custom-btn-reset text-c2 bg-c4 w-fit mb-5">Kurumsal</a>
+              <!-- Slider Social Icons -->
+              <div class="d-flex align-items-center gap-md mt-auto">
+                <p class="text-shadow tracking-text text-c2 fs-md mb-0">
+                  Bizi Takip Et
+                </p>
+                <div class="d-flex align-items-center gap-sm">
+                  <a href="">
+                    <img src="assets/icons/instagram-light.svg" class="size-sm" alt="" />
+                  </a>
+                  <a href="">
+                    <img src="assets/icons/facebook-light.svg" class="size-sm" alt="" />
+                  </a>
+                  <a href="">
+                    <img src="assets/icons/linkedin-light.svg" class="size-sm" alt="" />
+                  </a>
+                  <a href="">
+                    <img src="assets/icons/twitter-light.svg" class="size-sm" alt="" />
+                  </a>
+                </div>
+              </div>
+            </div>
+            <!-- Right -->
+            <div class="position-relative w-100 d-none d-xl-flex flex-column justify-content-end align-items-end">
+              <p class="text-uppercase solid-text opacity-50 fs-7xl slider-background-text">
+                REDÜK-
+                <br />
+                TÖRLER
+              </p>
+
+              <div class="slide-content-card">
+                <img class="slide-mascot-img" src="assets/ChatGPT Image Jul 22, 2025 at 02_49_20 PM copy@2x.webp"
+                  alt="" />
+                <div>
+                  <p class="tracking-text text-c6 mb-0 fs-lg">REDÜKTÖRLER</p>
+                  <p class="tracking-text text-c6 fw-semibold fs-lg">
+                    GEAR REDUCER
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="custom-site-gap"></div>
+
+  <!-- Intro Section -->
+  <section class="custom-container">
+    <div class="w-100">
+      <!-- Head -->
+      <div class="d-xl-flex w-100 justify-content-between align-items-center gap-8xl">
+        <div class="w-fit">
+          <p class="tracking-text text-c4 fs-lg mb-0">
+            Gücün Kontrol Noktası
+          </p>
+          <p class="text-c6 fs-5xl fw-semibold">
+            Hareketi Yönet,
+            <br />
+            Gücü Yönlendir
+          </p>
+        </div>
+        <div class="flex-1">
+          <p class="text-c6 fs-xl">
+            KONYA MOTOR MAKİNA VE MANYETİK FREN SAN. TİC. LTD. ŞTİ. olarak
+            temellerimiz, 1983 yılında bobinaj atölyesi olarak kurucumuz
+            Mehmet KARASAKAL’ın öncülüğünde atılmıştır. Kurulduğumuz ilk
+            günden bu yana kalite, güven ve sürdürülebilirlik ilkelerinden
+            ödün vermeden büyümeye devam ettik. 1990 yılında KARASAKAL
+            MANYETİK markasıyla manyetik fren imalatına başladık.
+          </p>
+          <a href="#" class="custom-btn-reset text-c2 bg-c4 w-fit">Kurumsal</a>
+        </div>
+      </div>
+      <!-- Banner -->
+      <img src="assets/shutterstock_1936499983@2x.webp" class="img-fluid object-fit-cover rounded-2xl my-5"
+        style="min-height: 250px" alt="" />
+      <!-- Counter -->
+      <div class="row g-5 justify-content-center mt-0">
+        <!-- 1. SAYAÇ -->
+        <div class="col-6 col-lg-3 counter-box">
+          <!-- class eklendi -->
+          <div class="d-flex flex-column align-items-center text-center">
+            <div class="mb-3">
+              <img src="assets/icons/time.svg" class="text-c4 size-xl" alt="Yıllık Tecrübe İkonu" />
+            </div>
+            <p class="text-c6 fs-3xl fw-bold ff-poppins mb-0 lh-1">45+</p>
+            <p class="text-c7 fs-lg ff-poppins mb-0 mt-2 opacity-75">
+              Yıllık Tecrübe
+            </p>
+          </div>
+        </div>
+        <!-- 2. SAYAÇ -->
+        <div class="col-6 col-lg-3 counter-box">
+          <!-- class eklendi -->
+          <div class="d-flex flex-column align-items-center text-center">
+            <div class="mb-3">
+              <img src="assets/icons/members.svg" class="text-c4 size-xl" alt="Uzman Ekip İkonu" />
+            </div>
+            <p class="text-c6 fs-3xl fw-bold ff-poppins mb-0 lh-1">100+</p>
+            <p class="text-c7 fs-lg ff-poppins mb-0 mt-2 opacity-75">
+              Uzman Ekip
+            </p>
+          </div>
+        </div>
+        <!-- 3. SAYAÇ -->
+        <div class="col-6 col-lg-3 counter-box">
+          <!-- class eklendi -->
+          <div class="d-flex flex-column align-items-center text-center">
+            <div class="mb-3">
+              <img src="assets/icons/layout.svg" class="text-c4 size-xl" alt="Ürün Gamı İkonu" />
+            </div>
+            <p class="text-c6 fs-3xl fw-bold ff-poppins mb-0 lh-1">500+</p>
+            <p class="text-c7 fs-lg ff-poppins mb-0 mt-2 opacity-75">
+              Ürün Gamı
+            </p>
+          </div>
+        </div>
+        <!-- 4. SAYAÇ -->
+        <div class="col-6 col-lg-3 counter-box">
+          <!-- class eklendi -->
+          <div class="d-flex flex-column align-items-center text-center">
+            <div class="mb-3">
+              <img src="assets/icons/path.svg" class="text-c4 size-xl" alt="Proje İkonu" />
+            </div>
+            <p class="text-c6 fs-3xl fw-bold ff-poppins mb-0 lh-1">750+</p>
+            <p class="text-c7 fs-lg ff-poppins mb-0 mt-2 opacity-75">Proje</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="custom-site-gap"></div>
+
+  <!-- Products Intro Section -->
+  <section class="custom-container">
+    <div class="w-100">
+      <!-- Head -->
+      <div class="d-xl-flex w-100 justify-content-between align-items-center">
+        <!-- Navigation buttons -->
+        <div class="d-none d-xl-flex gap-xs">
+          <button
+            class="custom-btn-reset text-c4 border-c4 rounded-full size-3xl opacity-50 swiper-product-slider-slide-prev"
+            style="padding: var(--post-gap-xs)" aria-label="Önceki slide">
+            <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
+              viewBox="0 0 24 24">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="m15 19-7-7 7-7" />
+            </svg>
+          </button>
+          <button
+            class="custom-btn-reset text-c4 border-c4 rounded-full size-3xl opacity-50 swiper-product-slider-slide-next"
+            style="padding: var(--post-gap-xs)" aria-label="Sonraki slide">
+            <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
+              viewBox="0 0 24 24">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="m9 5 7 7-7 7" />
+            </svg>
+          </button>
+        </div>
+        <!-- Title -->
+        <div class="text-center">
+          <p class="tracking-text text-c4 fs-xl">Kalite Üretiyoruz</p>
+          <p class="text-c6 fw-bold fs-5xl">
+            KonyaMotor Varsa
+            <br />
+            Güç Var!
+          </p>
+        </div>
+        <a href="#" class="custom-btn-reset text-c2 bg-c4 w-fit d-none d-xl-flex">Ürünler</a>
+      </div>
+      <!-- Slider -->
+      <div class="swiper swiper-product-slider" style="padding-inline: var(--post-gap-md)">
+        <div class="swiper-wrapper swiper-product-slider-wrapper">
+          <!-- Slide 1 -->
+          <a href="product-details.html" class="swiper-slide product-card">
+            <img src="assets/ChatGPT Image Jul 21, 2025 at 03_47_06 PM-3 copy@2x.webp" alt="Kulaklık"
+              class="product-card-image" />
+            <p class="text-uppercase text-c6 fw-semibold fs-2xl mb-5 product-card-title">
+              Redüktörler
+            </p>
+          </a>
+          <!-- Slide 2 -->
+          <div class="swiper-slide product-card">
+            <img src="assets/redüktör_2@2x.webp" alt="Kulaklık" class="product-card-image" />
+            <p class="text-uppercase text-c6 fw-semibold fs-2xl mb-5 product-card-title">
+              Planet Redüktörler
+            </p>
+          </div>
+          <!-- Slide 3 -->
+          <div class="swiper-slide product-card">
+            <img src="assets/ChatGPT Image Jul 21, 2025 at 03_47_06 PM-3 copy@2x.webp" alt="Kulaklık"
+              class="product-card-image" />
+            <p class="text-uppercase text-c6 fw-semibold fs-2xl mb-5 product-card-title">
+              Redüktörler
+            </p>
+          </div>
+          <!-- Slide 4 -->
+          <div class="swiper-slide product-card">
+            <img src="assets/redüktör_2@2x.webp" alt="Kulaklık" class="product-card-image" />
+            <p class="text-uppercase text-c6 fw-semibold fs-2xl mb-5 product-card-title">
+              Planet Redüktörler
+            </p>
+          </div>
+          <!-- Slide 5 -->
+          <div class="swiper-slide product-card">
+            <img src="assets/ChatGPT Image Jul 21, 2025 at 03_47_06 PM-3 copy@2x.webp" alt="Kulaklık"
+              class="product-card-image" />
+            <p class="text-uppercase text-c6 fw-semibold fs-2xl mb-5 product-card-title">
+              Redüktörler
+            </p>
+          </div>
+          <!-- Slide 6 -->
+          <div class="swiper-slide product-card">
+            <img src="assets/redüktör_2@2x.webp" alt="Kulaklık" class="product-card-image" />
+            <p class="text-uppercase text-c6 fw-semibold fs-2xl mb-5 product-card-title">
+              Planet Redüktörler
+            </p>
+          </div>
+          <!-- Slide 7 -->
+          <div class="swiper-slide product-card">
+            <img src="assets/ChatGPT Image Jul 21, 2025 at 03_47_06 PM-3 copy@2x.webp" alt="Kulaklık"
+              class="product-card-image" />
+            <p class="text-uppercase text-c6 fw-semibold fs-2xl mb-5 product-card-title">
+              Redüktörler
+            </p>
+          </div>
+          <!-- Slide 8 -->
+          <div class="swiper-slide product-card">
+            <img src="assets/redüktör_2@2x.webp" alt="Kulaklık" class="product-card-image" />
+            <p class="text-uppercase text-c6 fw-semibold fs-2xl mb-5 product-card-title">
+              Planet Redüktörler
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- Info -->
+      <div class="bg-c7 d-xl-flex justify-content-between align-items-center gap-6xl product-info-section">
+        <div class="w-fit">
+          <p class="text-c1 fs-5xl fw-bold">
+            Tasarlar.
+            <br />
+            Üretir.
+            <br />
+            Satar.
+          </p>
+        </div>
+
+        <div class="flex-1">
+          <p class="text-c1 fs-xl fw-lighter">
+            Ürünlerimiz; yüksek kalite standartlarına uygun, CNC torna ve
+            işleme merkezlerinde büyük bir hassasiyetle üretilmektedir. Satış
+            sonrası yedek parça ve teknik destek hizmetlerimizle müşteri
+            memnuniyetini daima ön planda tutmaktayız. Bugün, KARASAKAL
+            markası altında üretim faaliyetlerimizi sürdürmenin yanı sıra;
+            VOLT ELEKTRİK MOTOR A.Ş., MOTORSAN ABANA A.Ş., İMAK REDÜKTÖR, KEMP
+            VİBRASYON MOTORLARI ve YILDIZ POMPA gibi sektörün güçlü
+            markalarının bölge bayiliğini yapmanın gururunu yaşıyoruz. Türkiye
+            genelinde yaygın hizmet ağımız ve güvenilir marka imajımızla
+            müşterilerimizin çözüm ortağı olmaya devam ediyoruz.
+          </p>
+        </div>
+      </div>
+      <!-- Parallax -->
+      <div class="product-parallax" style="
+            background-image: url('assets/shutterstock_2168186893@2x.webp');
+            border-radius: 0 0 var(--post-rounded-2xl) var(--post-rounded-2xl);
+          "></div>
+    </div>
+  </section>
+
+  <div class="custom-site-gap"></div>
+
+  <!-- Media Intro Section -->
+  <section class="custom-container">
+    <div class="w-100">
+      <!-- Head -->
+      <div class="d-xl-flex w-100 justify-content-between align-items-center mb-5">
+        <div>
+          <p class="tracking-text fs-md text-c6 mb-0">
+            Bizi Yakından Tanıyın
+          </p>
+          <p class="fs-4xl text-c6 fw-semibold">Medya İçerikleri</p>
+        </div>
+        <a href="#" class="custom-btn-reset text-c2 bg-c4 w-fit d-none d-xl-flex">Medya</a>
+      </div>
+
+      <!-- Main -->
+      <div class="row g-4">
+        <!-- KART 1 -->
+        <div class="col-12 col-md-6 col-lg-4 col-xxl-3">
+          <div class="media-card bg-c3 text-c6 d-flex flex-column rounded-2xl">
+            <!-- İkon Kutusu -->
+            <div class="d-inline-flex justify-content-center align-items-center size-4xl bg-c6 text-c1 rounded-2xl">
+              <svg width="2rem" height="2rem" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g id="SVGRepo_bgCarrier" stroke-width="0" />
+
+                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" />
+
+                <g id="SVGRepo_iconCarrier">
+                  <g id="style=stroke">
+                    <g id="attach">
+                      <path id="vector (Stroke)" fill-rule="evenodd" clip-rule="evenodd"
+                        d="M17.3656 4.70536C16.2916 3.63142 14.5504 3.63142 13.4765 4.70536L5.34477 12.8371C3.68504 14.4968 3.68504 17.1878 5.34477 18.8475C7.0045 20.5072 9.69545 20.5072 11.3552 18.8475L20.1172 10.0855C20.41 9.79263 20.8849 9.79263 21.1778 10.0855C21.4707 10.3784 21.4707 10.8533 21.1778 11.1462L12.4158 19.9082C10.1703 22.1537 6.52963 22.1537 4.28411 19.9082C2.0386 17.6626 2.0386 14.0219 4.28411 11.7764L12.4158 3.6447C14.0756 1.98497 16.7665 1.98497 18.4262 3.6447C20.086 5.30443 20.086 7.99538 18.4262 9.65511L10.6327 17.4487C9.55876 18.5226 7.81756 18.5226 6.74361 17.4487C5.66967 16.3747 5.66967 14.6335 6.74361 13.5596L13.9377 6.36552C14.2305 6.07263 14.7054 6.07263 14.9983 6.36552C15.2912 6.65842 15.2912 7.13329 14.9983 7.42618L7.80427 14.6202C7.31612 15.1084 7.31612 15.8998 7.80427 16.388C8.29243 16.8761 9.08389 16.8761 9.57204 16.388L17.3656 8.59445C18.4395 7.5205 18.4395 5.7793 17.3656 4.70536Z"
+                        fill="currentColor" />
+                    </g>
+                  </g>
+                </g>
+              </svg>
+            </div>
+
+            <!-- Metin İçeriği -->
+            <div class="my-4 pt-2 flex-grow-1">
+              <p class="fs-lg mb-1">Konya Motor</p>
+              <h3 class="fs-2xl fw-semibold">Dökümanlar</h3>
+            </div>
+
+            <!-- Buton -->
+            <div>
+              <a href="#" class="custom-btn-reset text-c1 bg-c6 w-fit d-none d-xl-flex">İndir</a>
+            </div>
+          </div>
+        </div>
+        <!-- KART 2 -->
+        <div class="col-12 col-md-6 col-lg-4 col-xxl-3">
+          <div class="media-card bg-c6 text-c1 d-flex flex-column rounded-2xl">
+            <!-- İkon Kutusu -->
+            <div class="d-inline-flex justify-content-center align-items-center size-4xl bg-c1 text-c6 rounded-2xl">
+              <svg width="2rem" height="2rem" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g id="SVGRepo_bgCarrier" stroke-width="0" />
+
+                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" />
+
+                <g id="SVGRepo_iconCarrier">
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M12 3C12.5523 3 13 3.44772 13 4V17.5858L18.2929 12.2929C18.6834 11.9024 19.3166 11.9024 19.7071 12.2929C20.0976 12.6834 20.0976 13.3166 19.7071 13.7071L12.7071 20.7071C12.3166 21.0976 11.6834 21.0976 11.2929 20.7071L4.29289 13.7071C3.90237 13.3166 3.90237 12.6834 4.29289 12.2929C4.68342 11.9024 5.31658 11.9024 5.70711 12.2929L11 17.5858V4C11 3.44772 11.4477 3 12 3Z"
+                    fill="currentColor" />
+                </g>
+              </svg>
+            </div>
+
+            <!-- Metin İçeriği -->
+            <div class="my-4 pt-2 flex-grow-1">
+              <p class="fs-lg mb-1">Kurumsal</p>
+              <h3 class="fs-2xl fw-semibold">Logo Kiti</h3>
+            </div>
+
+            <!-- Resim -->
+            <div class="mt-5" style="padding-top: var(--post-gap-4xl) !important">
+              <img src="assets/adobe.webp" class="img-fluid w-100" style="max-width: 200px" alt="" />
+            </div>
+          </div>
+        </div>
+        <!-- KART 3 -->
+        <div class="col-12 col-md-6 col-lg-4 col-xxl-3">
+          <div class="media-card bg-c3 text-c6 d-flex flex-column rounded-2xl">
+            <!-- İkon Kutusu -->
+            <div class="d-inline-flex justify-content-center align-items-center size-4xl bg-c6 text-c1 rounded-2xl">
+              <svg width="2rem" height="2rem" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g id="SVGRepo_bgCarrier" stroke-width="0" />
+
+                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" />
+
+                <g id="SVGRepo_iconCarrier">
+                  <path
+                    d="M20.4086 9.35258C22.5305 10.5065 22.5305 13.4935 20.4086 14.6474L7.59662 21.6145C5.53435 22.736 3 21.2763 3 18.9671L3 5.0329C3 2.72368 5.53435 1.26402 7.59661 2.38548L20.4086 9.35258Z"
+                    stroke="currentColor" stroke-width="1.5" />
+                </g>
+              </svg>
+            </div>
+
+            <!-- Metin İçeriği -->
+            <div class="my-4 pt-2 flex-grow-1">
+              <p class="fs-lg mb-1">Kurumsal</p>
+              <h3 class="fs-2xl fw-semibold">Tanıtım Filmi</h3>
+            </div>
+          </div>
+        </div>
+        <!-- KART 4 -->
+        <div class="col-12 col-md-6 col-lg-12 col-xxl-3">
+          <div class="media-card bg-c4 text-c1 d-flex flex-column rounded-2xl">
+            <!-- İkon Kutusu -->
+            <div class="d-inline-flex justify-content-center align-items-center size-4xl bg-c1 text-c4 rounded-2xl">
+              <svg width="2rem" height="2rem" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g id="SVGRepo_bgCarrier" stroke-width="0" />
+
+                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" />
+
+                <g id="SVGRepo_iconCarrier">
+                  <path
+                    d="M16.1007 13.359L15.5719 12.8272H15.5719L16.1007 13.359ZM16.5562 12.9062L17.085 13.438H17.085L16.5562 12.9062ZM18.9728 12.5894L18.6146 13.2483L18.9728 12.5894ZM20.8833 13.628L20.5251 14.2869L20.8833 13.628ZM21.4217 16.883L21.9505 17.4148L21.4217 16.883ZM20.0011 18.2954L19.4723 17.7636L20.0011 18.2954ZM18.6763 18.9651L18.7459 19.7119H18.7459L18.6763 18.9651ZM8.81536 14.7266L9.34418 14.1947L8.81536 14.7266ZM4.00289 5.74561L3.2541 5.78816L3.2541 5.78816L4.00289 5.74561ZM10.4775 7.19738L11.0063 7.72922H11.0063L10.4775 7.19738ZM10.6342 4.54348L11.2346 4.09401L10.6342 4.54348ZM9.37326 2.85908L8.77286 3.30855V3.30855L9.37326 2.85908ZM6.26145 2.57483L6.79027 3.10667H6.79027L6.26145 2.57483ZM4.69185 4.13552L4.16303 3.60368H4.16303L4.69185 4.13552ZM12.0631 11.4972L12.5919 10.9654L12.0631 11.4972ZM16.6295 13.8909L17.085 13.438L16.0273 12.3743L15.5719 12.8272L16.6295 13.8909ZM18.6146 13.2483L20.5251 14.2869L21.2415 12.9691L19.331 11.9305L18.6146 13.2483ZM20.8929 16.3511L19.4723 17.7636L20.5299 18.8273L21.9505 17.4148L20.8929 16.3511ZM18.6067 18.2184C17.1568 18.3535 13.4056 18.2331 9.34418 14.1947L8.28654 15.2584C12.7186 19.6653 16.9369 19.8805 18.7459 19.7119L18.6067 18.2184ZM9.34418 14.1947C5.4728 10.3453 4.83151 7.10765 4.75168 5.70305L3.2541 5.78816C3.35456 7.55599 4.14863 11.144 8.28654 15.2584L9.34418 14.1947ZM10.7195 8.01441L11.0063 7.72922L9.9487 6.66555L9.66189 6.95073L10.7195 8.01441ZM11.2346 4.09401L9.97365 2.40961L8.77286 3.30855L10.0338 4.99296L11.2346 4.09401ZM5.73263 2.04299L4.16303 3.60368L5.22067 4.66736L6.79027 3.10667L5.73263 2.04299ZM10.1907 7.48257C9.66189 6.95073 9.66117 6.95144 9.66045 6.95216C9.66021 6.9524 9.65949 6.95313 9.659 6.95362C9.65802 6.95461 9.65702 6.95561 9.65601 6.95664C9.65398 6.95871 9.65188 6.96086 9.64972 6.9631C9.64539 6.96759 9.64081 6.97245 9.63599 6.97769C9.62634 6.98816 9.61575 7.00014 9.60441 7.01367C9.58174 7.04072 9.55605 7.07403 9.52905 7.11388C9.47492 7.19377 9.41594 7.2994 9.36589 7.43224C9.26376 7.70329 9.20901 8.0606 9.27765 8.50305C9.41189 9.36833 10.0078 10.5113 11.5343 12.0291L12.5919 10.9654C11.1634 9.54499 10.8231 8.68059 10.7599 8.27309C10.7298 8.07916 10.761 7.98371 10.7696 7.96111C10.7748 7.94713 10.7773 7.9457 10.7709 7.95525C10.7677 7.95992 10.7624 7.96723 10.7541 7.97708C10.75 7.98201 10.7451 7.98759 10.7394 7.99381C10.7365 7.99692 10.7335 8.00019 10.7301 8.00362C10.7285 8.00534 10.7268 8.00709 10.725 8.00889C10.7241 8.00979 10.7232 8.0107 10.7223 8.01162C10.7219 8.01208 10.7212 8.01278 10.7209 8.01301C10.7202 8.01371 10.7195 8.01441 10.1907 7.48257ZM11.5343 12.0291C13.0613 13.5474 14.2096 14.1383 15.0763 14.2713C15.5192 14.3392 15.8763 14.285 16.1472 14.1841C16.28 14.1346 16.3858 14.0763 16.4658 14.0227C16.5058 13.9959 16.5392 13.9704 16.5663 13.9479C16.5799 13.9367 16.5919 13.9262 16.6024 13.9166C16.6077 13.9118 16.6126 13.9073 16.6171 13.903C16.6194 13.9008 16.6215 13.8987 16.6236 13.8967C16.6246 13.8957 16.6256 13.8947 16.6266 13.8937C16.6271 13.8932 16.6279 13.8925 16.6281 13.8923C16.6288 13.8916 16.6295 13.8909 16.1007 13.359C15.5719 12.8272 15.5726 12.8265 15.5733 12.8258C15.5735 12.8256 15.5742 12.8249 15.5747 12.8244C15.5756 12.8235 15.5765 12.8226 15.5774 12.8217C15.5793 12.82 15.581 12.8183 15.5827 12.8166C15.5862 12.8133 15.5895 12.8103 15.5926 12.8074C15.5988 12.8018 15.6044 12.7969 15.6094 12.7929C15.6192 12.7847 15.6265 12.7795 15.631 12.7764C15.6403 12.7702 15.6384 12.773 15.6236 12.7785C15.5991 12.7876 15.501 12.8189 15.3038 12.7886C14.8905 12.7253 14.02 12.3853 12.5919 10.9654L11.5343 12.0291ZM9.97365 2.40961C8.95434 1.04802 6.94996 0.83257 5.73263 2.04299L6.79027 3.10667C7.32195 2.578 8.26623 2.63181 8.77286 3.30855L9.97365 2.40961ZM4.75168 5.70305C4.73201 5.35694 4.89075 4.9954 5.22067 4.66736L4.16303 3.60368C3.62571 4.13795 3.20329 4.89425 3.2541 5.78816L4.75168 5.70305ZM19.4723 17.7636C19.1975 18.0369 18.9029 18.1908 18.6067 18.2184L18.7459 19.7119C19.4805 19.6434 20.0824 19.2723 20.5299 18.8273L19.4723 17.7636ZM11.0063 7.72922C11.9908 6.7503 12.064 5.2019 11.2346 4.09401L10.0338 4.99295C10.4373 5.53193 10.3773 6.23938 9.9487 6.66555L11.0063 7.72922ZM20.5251 14.2869C21.3429 14.7315 21.4703 15.7769 20.8929 16.3511L21.9505 17.4148C23.2908 16.0821 22.8775 13.8584 21.2415 12.9691L20.5251 14.2869ZM17.085 13.438C17.469 13.0562 18.0871 12.9616 18.6146 13.2483L19.331 11.9305C18.2474 11.3414 16.9026 11.5041 16.0273 12.3743L17.085 13.438Z"
+                    fill="currentColor" />
+                </g>
+              </svg>
+            </div>
+
+            <!-- Metin İçeriği -->
+            <div class="my-4 pt-2 flex-grow-1">
+              <p class="fs-lg mb-1">Bizimle</p>
+              <h3 class="fs-2xl fw-semibold">Görüşün</h3>
+            </div>
+
+            <!-- Buton -->
+            <div>
+              <a href="#" class="text-c1 fs-4xl text-decoration-none">+90 332 123 45 67</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="custom-site-gap"></div>
+
+  <!-- Footer -->
+  <section class="custom-container">
+    <div class="w-100">
+      <!-- Head -->
+      <div class="d-flex flex-column flex-xl-row justify-content-between align-items-center gap-md">
+        <div class="d-flex align-items-center gap-sm">
+          <img src="assets/logo.svg" class="size-5xl" alt="" />
+          <img src="assets/logo-2-dark.svg" class="size-5xl" alt="" />
+        </div>
+        <div class="d-flex align-items-center gap-md">
+          <a href="">
+            <img src="assets/icons/instagram.svg" class="size-lg" alt="" />
+          </a>
+          <a href="">
+            <img src="assets/icons/facebook.svg" class="size-lg" alt="" />
+          </a>
+          <a href="">
+            <img src="assets/icons/linkedin.svg" class="size-lg" alt="" />
+          </a>
+          <a href="">
+            <img src="assets/icons/square-x-twitter.svg" class="size-lg" alt="" />
+          </a>
+        </div>
+      </div>
+      <!-- Main -->
+      <div class="d-flex flex-wrap w-100 justify-content-between gap-md" style="
+            margin-block: var(--post-gap-2xl);
+            padding-block: var(--post-gap-4xl);
+            border-top: 1px solid var(--post-c5);
+            border-bottom: 1px solid var(--post-c5);
+          ">
+        <!-- info -->
+        <div class="d-flex flex-column gap-sm w-100 text-c6 fs-lg mb-5" style="max-width: 500px">
+          <p class="text-c6 fs-2xl mb-0">Müşterilerimiz</p>
+          <p class="text-c6 fw-bold fs-3xl">Referansımızdır</p>
+          <a href="#" class="custom-btn-reset text-c2 bg-c4 w-fit">Konumumuzu Gör</a>
+        </div>
+        <!-- 1 -->
+        <div class="d-flex flex-column gap-xl w-100 text-c6 fs-lg mb-5" style="max-width: 300px">
+          <p class="fw-semibold fs-xl mb-0">Kurumsal</p>
+          <a href="" class="text-decoration-none text-c6">Hakkımızda</a>
+          <a href="" class="text-decoration-none text-c6">Misyonumuz</a>
+          <a href="" class="text-decoration-none text-c6">Vizyonumuz</a>
+          <a href="" class="text-decoration-none text-c6">Üretim</a>
+        </div>
+        <!-- 2 -->
+        <div class="d-flex flex-column gap-xl w-100 mb-5" style="max-width: 300px">
+          <p class="fw-semibold fs-xl mb-0">Kurumsal</p>
+          <a href="" class="text-decoration-none text-c6">Hakkımızda</a>
+          <a href="" class="text-decoration-none text-c6">Misyonumuz</a>
+          <a href="" class="text-decoration-none text-c6">Vizyonumuz</a>
+          <a href="" class="text-decoration-none text-c6">Üretim</a>
+        </div>
+        <!-- 3 -->
+        <div class="d-flex flex-column gap-xl w-100 mb-5" style="max-width: 300px">
+          <p class="fw-semibold fs-xl mb-0">Kurumsal</p>
+          <a href="" class="text-decoration-none text-c6">Hakkımızda</a>
+          <a href="" class="text-decoration-none text-c6">Misyonumuz</a>
+          <a href="" class="text-decoration-none text-c6">Vizyonumuz</a>
+          <a href="" class="text-decoration-none text-c6">Üretim</a>
+        </div>
+        <!-- 4 -->
+        <div class="d-flex flex-column gap-xl w-100 mb-5" style="max-width: 300px">
+          <p class="fw-semibold fs-xl mb-0">Kurumsal</p>
+          <a href="" class="text-decoration-none text-c6">Hakkımızda</a>
+          <a href="" class="text-decoration-none text-c6">Misyonumuz</a>
+          <a href="" class="text-decoration-none text-c6">Vizyonumuz</a>
+          <a href="" class="text-decoration-none text-c6">Üretim</a>
+        </div>
+      </div>
+      <!-- Copyright -->
+      <div class="d-flex flex-column flex-xl-row justify-content-between align-items-center gap-md"
+        style="padding-bottom: var(--post-gap-xl)">
+        <p class="text-c6 fs-md">© 2025 Konya Motor | Her Hakkı Saklıdır.</p>
+        <img src="assets/post-logo.svg" alt="" />
+      </div>
+    </div>
+  </section>
+
+  <!-- Bootstrap 5 JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <!-- Custom JS -->
+  <script src="custom.js"></script>
+</body>
+
+</html>

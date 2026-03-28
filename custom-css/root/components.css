@@ -1,0 +1,108 @@
+/* Custom Layout */
+.custom-container {
+  display: flex;
+  flex-wrap: inherit;
+  align-items: center;
+  justify-content: space-between;
+  max-width: var(--post-container);
+  width: 100%;
+  margin-inline: auto;
+  padding-inline: var(--post-container-gutter);
+}
+
+.custom-site-gap {
+  padding-block: var(--post-site-gutter);
+  width: 100%;
+}
+
+.custom-navbar-gap {
+  width: 100%;
+  padding-bottom: calc((var(--navbar-h) + (var(--post-gap-md) * 2)));
+}
+/* Custom Layout End */
+
+/*----------All Button Desgin----------*/
+
+/* Reset */
+.custom-btn-reset {
+  cursor: pointer;
+  transition: var(--post-transition);
+  background: transparent;
+  background-color: transparent;
+  border: none;
+  color: var(--post-c1);
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  white-space: nowrap;
+  gap: var(--post-gap-xs);
+  padding: var(--post-gap-sm) var(--post-gap-lg);
+  min-height: var(--input-h);
+  height: fit-content;
+  font-size: var(--post-fs-sm);
+  border-radius: var(--post-rounded-xs);
+  text-decoration: none;
+  outline: none;
+}
+
+.custom-btn-reset:not(:disabled):hover {
+  filter: brightness(110%);
+}
+
+.custom-btn-reset:not(:disabled):active {
+  transform: scale(0.95);
+}
+
+.custom-btn-reset:disabled {
+  opacity: 0.7;
+  cursor: default;
+}
+
+/*----------All Button Desgin End----------*/
+
+/*----------All TextBox Design----------*/
+
+/* Reset */
+.custom-textbox-reset {
+  transition: var(--post-transition);
+  background: transparent;
+  background-color: transparent;
+  border-width: 1px;
+  border-style: solid;
+  border-color: var(--post-border);
+  color: var(--post-c1);
+  padding: 0.5rem 1rem;
+  height: var(--input-h);
+  font-size: var(--post-fs-sm);
+  border-radius: var(--post-rounded-xs);
+}
+
+.custom-textbox-reset::placeholder {
+  color: var(--post-placeholder);
+  opacity: 1;
+}
+
+.custom-textbox-reset:not(:disabled):focus {
+  box-shadow: var(--post-shadow-md);
+}
+
+.custom-textbox-reset:disabled {
+  opacity: 0.7;
+  cursor: default;
+}
+
+/*----------All TextBox Design End----------*/
+
+.solid-text {
+  color: transparent;
+  font-weight: bold;
+  -webkit-text-stroke: 1px var(--post-c2);
+  -moz-text-stroke: 1px var(--post-c2);
+}
+
+.tracking-text {
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-weight: 400;
+}

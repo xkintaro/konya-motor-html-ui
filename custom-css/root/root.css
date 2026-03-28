@@ -1,0 +1,197 @@
+@import url(reset.css);
+@import url(variables.css);
+@import url(components.css);
+
+@import url(../components/navbar.css);
+@import url(../components/slider.css);
+@import url(../components/products.css);
+@import url(../components/media.css);
+@import url(../components/marque-slider.css);
+@import url(../components/counter.css);
+
+@import url("https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Next:ital,wght@0,200..800;1,200..800&family=Host+Grotesk:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Satisfy&display=swap");
+
+:root {
+  /* Colors */
+  --post-c1: #ffffff;
+  --post-c2: #f5f7f8;
+  --post-c3: #bec7cc;
+  --post-c4: #dc1c0a;
+  --post-c5: #15336f;
+  --post-c6: #0b1d31;
+  --post-c7: #3b4a5a;
+
+  --post-nav: var(--post-c1);
+  --post-border: var(--post-c1);
+  --post-placeholder: #15336f81;
+
+  /* Others */
+  --popup-z: 950;
+  --navbar-z: 800;
+  --navbar-h: calc(var(--post-gap-lg) * 6);
+  --input-h: 50px;
+
+  /* Font Family */
+  --default-font: "Atkinson Hyperlegible Next", -apple-system,
+    BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+
+  /* Container */
+  --post-container: 100%;
+  --post-container-gutter: clamp(1rem, 5vw, 3rem);
+  --post-site-gutter: clamp(1.5rem, 3vw, 3rem);
+
+  /* Line Height */
+  --post-lh-xs: 1.6;
+  --post-lh-sm: 1.6;
+  --post-lh-md: 1.5;
+  --post-lh-lg: 1.5;
+  --post-lh-xl: 1.4;
+  --post-lh-2xl: 1.3;
+  --post-lh-3xl: 1.25;
+  --post-lh-4xl: 1.2;
+  --post-lh-5xl: 1.15;
+  --post-lh-6xl: 1.1;
+  --post-lh-7xl: 1.1;
+  --post-lh-8xl: 1.05;
+  --post-lh-9xl: 1;
+
+  /* Radius, Shadow, Transition */
+  --post-rounded-xs: 0.125rem;
+  --post-rounded-sm: 0.25rem;
+  --post-rounded-md: 0.375rem;
+  --post-rounded-lg: 0.5rem;
+  --post-rounded-xl: 0.75rem;
+  --post-rounded-2xl: 1rem;
+  --post-rounded-full: 9999px;
+  --post-transition: 0.3s ease-in-out all;
+  --post-text-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  --post-shadow-color-rgb: 0, 0, 0;
+  --post-shadow-xs: 0 1px 2px 0 rgba(var(--post-shadow-color-rgb), 0.05);
+  --post-shadow-sm: 0 1px 3px 0 rgba(var(--post-shadow-color-rgb), 0.1),
+    0 1px 2px 0 rgba(var(--post-shadow-color-rgb), 0.06);
+  --post-shadow-md: 0 4px 6px -1px rgba(var(--post-shadow-color-rgb), 0.1),
+    0 2px 4px -1px rgba(var(--post-shadow-color-rgb), 0.06);
+  --post-shadow-lg: 0 10px 15px -3px rgba(var(--post-shadow-color-rgb), 0.1),
+    0 4px 6px -2px rgba(var(--post-shadow-color-rgb), 0.05);
+  --post-shadow-xl: 0 20px 25px -5px rgba(var(--post-shadow-color-rgb), 0.1),
+    0 10px 10px -5px rgba(var(--post-shadow-color-rgb), 0.04);
+  --post-shadow-2xl: 0 25px 50px -12px rgba(var(--post-shadow-color-rgb), 0.25);
+
+  /* Font Size */
+  --post-fs-xs: clamp(0.6rem, 1.2vw, 0.7rem);
+  --post-fs-sm: clamp(0.7rem, 1.44vw, 0.8rem);
+  --post-fs-md: clamp(0.8rem, 1.6vw, 0.9rem);
+  --post-fs-lg: clamp(0.9rem, 1.76vw, 1rem);
+  --post-fs-xl: clamp(1rem, 2vw, 1.2rem);
+  --post-fs-2xl: clamp(1.1rem, 2.4vw, 1.6rem);
+  --post-fs-3xl: clamp(1.2rem, 2.8vw, 2rem);
+  --post-fs-4xl: clamp(1.4rem, 3.2vw, 2.4rem);
+  --post-fs-5xl: clamp(1.6rem, 4vw, 2.8rem);
+  --post-fs-6xl: clamp(1.8rem, 4.8vw, 3.2rem);
+  --post-fs-7xl: clamp(2rem, 5.6vw, 3.6rem);
+  --post-fs-8xl: clamp(2.2rem, 6.4vw, 4rem);
+  --post-fs-9xl: clamp(2.4rem, 7.2vw, 4.8rem);
+
+  /* Gap */
+  --post-gap-xs: 0.2rem;
+  --post-gap-sm: clamp(0.4rem, 1.2vw, 0.8rem);
+  --post-gap-md: clamp(0.6rem, 1.6vw, 1.2rem);
+  --post-gap-lg: clamp(0.8rem, 2.4vw, 1.6rem);
+  --post-gap-xl: clamp(1.2rem, 3.2vw, 2.4rem);
+  --post-gap-2xl: clamp(1.6rem, 4vw, 3.2rem);
+  --post-gap-3xl: clamp(2rem, 4.8vw, 4rem);
+  --post-gap-4xl: clamp(2.4rem, 5.6vw, 4.8rem);
+  --post-gap-5xl: clamp(2.8rem, 6.4vw, 5.6rem);
+  --post-gap-6xl: clamp(3.2rem, 7.2vw, 6.4rem);
+  --post-gap-7xl: clamp(3.6rem, 8vw, 7.2rem);
+  --post-gap-8xl: clamp(4rem, 8.8vw, 8rem);
+  --post-gap-9xl: clamp(4.8rem, 9.6vw, 9.6rem);
+
+  /* Size */
+  --post-size-xs: 0.8rem;
+  --post-size-sm: 1rem;
+  --post-size-md: 1.2rem;
+  --post-size-lg: 1.6rem;
+  --post-size-xl: 2rem;
+  --post-size-2xl: clamp(2.4rem, 4vw, 3.2rem);
+  --post-size-3xl: clamp(2.8rem, 4.8vw, 4rem);
+  --post-size-4xl: clamp(3.2rem, 5.6vw, 4.8rem);
+  --post-size-5xl: clamp(4rem, 6.4vw, 5.6rem);
+  --post-size-6xl: clamp(4.8rem, 7.2vw, 7.2rem);
+  --post-size-7xl: clamp(5.6rem, 8vw, 8.8rem);
+  --post-size-8xl: clamp(6.4rem, 8.8vw, 10.4rem);
+  --post-size-9xl: clamp(7.2rem, 9.6vw, 12rem);
+}
+
+@media (min-width: 1200px) {
+  :root {
+    /* Container */
+    --post-container: 100%;
+    --post-container-gutter: clamp(2rem, 4vw, 8rem);
+    --post-site-gutter: clamp(3rem, 4.5vw, 6rem);
+
+    /* Font Size */
+    --post-fs-xs: clamp(0.83rem, 0.47vw, 0.95rem);
+    --post-fs-sm: clamp(0.95rem, 0.47vw, 1.07rem);
+    --post-fs-md: clamp(1.07rem, 0.47vw, 1.18rem);
+    --post-fs-lg: clamp(1.18rem, 0.57vw, 1.42rem);
+    --post-fs-xl: clamp(1.42rem, 0.66vw, 1.66rem);
+    --post-fs-2xl: clamp(1.66rem, 0.95vw, 2.13rem);
+    --post-fs-3xl: clamp(2.13rem, 1.14vw, 2.61rem);
+    --post-fs-4xl: clamp(2.61rem, 1.42vw, 3.32rem);
+    --post-fs-5xl: clamp(2.85rem, 1.9vw, 3.8rem);
+    --post-fs-6xl: clamp(3.32rem, 2.37vw, 4.75rem);
+    --post-fs-7xl: clamp(3.8rem, 2.85vw, 5.7rem);
+    --post-fs-8xl: clamp(4.28rem, 3.32vw, 6.65rem);
+    --post-fs-9xl: clamp(4.75rem, 3.8vw, 8.07rem);
+
+    /* Gap */
+    --post-gap-xs: 0.475rem;
+    --post-gap-sm: clamp(0.71rem, 0.47vw, 0.95rem);
+    --post-gap-md: clamp(0.95rem, 0.76vw, 1.42rem);
+    --post-gap-lg: clamp(1.42rem, 0.95vw, 2.37rem);
+    --post-gap-xl: clamp(2.37rem, 1.42vw, 3.8rem);
+    --post-gap-2xl: clamp(2.85rem, 1.9vw, 4.75rem);
+    --post-gap-3xl: clamp(3.8rem, 2.37vw, 6.65rem);
+    --post-gap-4xl: clamp(4.75rem, 2.85vw, 7.6rem);
+    --post-gap-5xl: clamp(5.7rem, 3.8vw, 9.5rem);
+    --post-gap-6xl: clamp(6.65rem, 4.75vw, 11.4rem);
+    --post-gap-7xl: clamp(7.6rem, 5.7vw, 13.3rem);
+    --post-gap-8xl: clamp(8.55rem, 6.65vw, 15.2rem);
+    --post-gap-9xl: clamp(9.5rem, 7.6vw, 19rem);
+
+    /* Size */
+    --post-size-xs: 1.18rem;
+    --post-size-sm: 1.42rem;
+    --post-size-md: 1.9rem;
+    --post-size-lg: 2.37rem;
+    --post-size-xl: 2.85rem;
+    --post-size-2xl: clamp(3.32rem, 1.9vw, 4.75rem);
+    --post-size-3xl: clamp(4.28rem, 2.37vw, 6.17rem);
+    --post-size-4xl: clamp(5.23rem, 2.85vw, 7.6rem);
+    --post-size-5xl: clamp(6.17rem, 3.8vw, 9.5rem);
+    --post-size-6xl: clamp(7.6rem, 4.75vw, 11.4rem);
+    --post-size-7xl: clamp(9.025rem, 5.7vw, 13.3rem);
+    --post-size-8xl: clamp(10.45rem, 6.65vw, 15.2rem);
+    --post-size-9xl: clamp(11.875rem, 7.6vw, 17.1rem);
+  }
+}
+
+@media (min-width: 1600px) {
+  :root {
+    /* Container */
+    --post-container: 100%;
+    --post-container-gutter: clamp(4rem, 8vw, 12rem);
+    --post-site-gutter: clamp(3rem, 4.5vw, 6rem);
+
+    /* Font Size */
+    --post-fs-2xl: clamp(2rem, 1.5vw, 3rem);
+    --post-fs-3xl: clamp(2.5rem, 2vw, 4rem);
+    --post-fs-4xl: clamp(3rem, 2.5vw, 5rem);
+    --post-fs-5xl: clamp(3.5rem, 3.5vw, 7.5rem);
+    --post-fs-6xl: clamp(4.5rem, 5vw, 10rem);
+    --post-fs-7xl: clamp(5.5rem, 6.5vw, 13rem);
+    --post-fs-8xl: clamp(6.5rem, 8vw, 16.5rem);
+    --post-fs-9xl: clamp(7.5rem, 10vw, 22rem);
+  }
+}

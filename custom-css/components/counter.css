@@ -1,0 +1,28 @@
+/*----------Counter----------*/
+
+.counter-box {
+  position: relative;
+}
+
+.counter-box::after {
+  content: "";
+  position: absolute;
+  top: 15%;
+  bottom: 15%;
+  right: 0;
+  width: 1px;
+  background-color: var(--post-c3);
+  display: none;
+}
+
+.counter-box:nth-child(odd)::after {
+  display: block;
+}
+
+@media (min-width: 992px) {
+  .counter-box:not(:last-child)::after {
+    display: block;
+  }
+}
+
+/*----------Counter End----------*/

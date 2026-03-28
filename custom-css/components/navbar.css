@@ -1,0 +1,122 @@
+/*----------Navbar Section----------*/
+
+/* Reset Navbar */
+.navbar {
+  padding: 0 !important;
+}
+
+.custom-navbar {
+  margin-top: var(--post-gap-md);
+  background-color: var(--post-c5);
+  backdrop-filter: blur(3px);
+  display: flex;
+  flex-wrap: inherit;
+  align-items: center;
+  justify-content: space-between;
+  max-width: var(--post-container);
+  width: 100%;
+  margin-inline: auto;
+  padding: var(--post-gap-lg);
+  transition: var(--post-transition);
+}
+
+.custom-navbar.homepage {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.custom-navbar.scrolled {
+  background-color: rgba(0, 0, 0, 0.3);
+  margin-top: 0;
+  backdrop-filter: blur(10px);
+  padding-block: var(--post-gap-xs);
+}
+
+/* Reset Navbar End */
+
+/* Reset Toggler */
+.navbar-toggler {
+  border: none;
+  outline: none;
+  transition: var(--post-transition);
+  padding: var(--post-gap-xs);
+  background-color: var(--post-c1);
+  border-radius: var(--post-rounded-full);
+  font-size: var(--post-fs-md);
+}
+
+.navbar-toggler:hover {
+  filter: brightness(1.5);
+}
+
+.navbar-toggler:active {
+  scale: 0.9;
+}
+
+.navbar-toggler:focus {
+  border: none;
+  outline: none;
+  box-shadow: none;
+}
+/* Reset Toggler End */
+
+.navbar-collapse.navbar-nav {
+  align-items: center;
+}
+
+.navbar-nav {
+  gap: var(--post-gap-xl);
+}
+
+/* Reset Nav Link */
+.nav-link {
+  gap: var(--post-gap-xs);
+  display: inline-flex;
+  align-items: center;
+  color: var(--post-nav);
+  font-size: var(--post-fs-sm);
+  text-transform: uppercase;
+  transition: var(--post-transition);
+}
+
+.nav-link.active {
+  color: var(--post-nav) !important;
+  filter: brightness(1.2) !important;
+}
+
+.nav-link.active:hover {
+  color: var(--post-nav) !important;
+  filter: brightness(1) !important;
+}
+
+.nav-link:hover {
+  color: var(--post-nav) !important;
+  filter: brightness(0.8) !important;
+}
+/* Reset Nav Link End*/
+
+/* Reset Dropdown Menu */
+.navbar .nav-item.dropdown:hover .dropdown-menu.custom-hover-dropdown-menu {
+  display: block;
+}
+
+.language-switcher.dropdown-menu {
+  background-color: transparent;
+  background: transparent;
+  min-width: auto;
+  border-radius: var(--post-rounded-full);
+  margin-top: var(--post-gap-xs);
+}
+
+.language-switcher {
+  border: 1px solid var(--post-border);
+  border-radius: var(--post-rounded-full);
+}
+
+.collapse.language-switcher {
+  border-radius: 0;
+  border: none;
+  padding: var(--post-gap-xs);
+}
+/* Reset Dropdown Menu End */
+
+/*----------Navbar Section End----------*/

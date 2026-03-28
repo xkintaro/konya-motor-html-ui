@@ -1,0 +1,92 @@
+/*----------Products Section----------*/
+:root {
+  --custom-product-image-gap: clamp(3.125rem, 8vw, 9.375rem);
+  --custom-product-info-section-gap: clamp(6.25rem, 16vw, 18.75rem);
+}
+
+.swiper-product-slider {
+  width: 100%;
+  padding-top: var(--custom-product-image-gap);
+  overflow: hidden;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+}
+
+.swiper-product-slider-wrapper {
+  position: relative;
+}
+
+.product-card {
+  transition: var(--post-transition);
+  background-color: var(--post-c3);
+  backdrop-filter: blur(10px);
+  border-radius: var(--post-rounded-2xl);
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: var(--post-gap-lg);
+  overflow: visible;
+  padding: var(--post-gap-xl);
+  padding-bottom: calc(var(--post-gap-md) + 2rem);
+  width: 100%;
+}
+
+.product-card:hover {
+  background-color: var(--post-c4);
+}
+
+.product-card-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  transform: translateY(calc(-1 * var(--custom-product-image-gap)));
+  transition: var(--post-transition);
+}
+
+.product-card-title {
+  transition: var(--post-transition);
+  position: absolute;
+  bottom: 0;
+}
+
+.product-card:hover .product-card-image {
+  transform: translateY(0);
+}
+
+.product-card:hover .product-card-title {
+  color: var(--post-c1) !important;
+  letter-spacing: 5px;
+  text-shadow: var(--post-text-shadow);
+}
+
+.product-info-section {
+  padding: var(--post-gap-6xl);
+  padding-top: calc(
+    var(--custom-product-info-section-gap) + var(--post-gap-6xl)
+  ) !important;
+  transform: translateY(calc(-1 * var(--custom-product-info-section-gap)));
+  margin-bottom: calc(-1 * var(--custom-product-info-section-gap));
+}
+
+.product-parallax {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  width: 100%;
+  height: auto;
+  min-height: 350px;
+  display: flex;
+  align-items: center;
+}
+
+@media (min-width: 1200px) {
+  .product-parallax {
+    min-height: 650px;
+  }
+}
+/*----------Products Section End----------*/

@@ -1,0 +1,10 @@
+.media-card {
+  padding: var(--post-gap-2xl);
+  height: 100%;
+  transition: var(--post-transition);
+}
+
+.media-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-lg);
+}

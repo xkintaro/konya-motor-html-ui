@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Medya</title>
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <!-- Fancybox CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.css" />
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="custom-css/root/root.css" />
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-xl fixed-top">
+    <div class="custom-container">
+      <div class="custom-navbar">
+        <!-- Logo -->
+        <a class="navbar-brand" href="index.html">
+          <img src="assets/logo.svg" class="size-4xl" alt="" />
+          <img src="assets/logo-2.svg" class="size-4xl ms-2" alt="" />
+        </a>
+
+        <!-- Menu Button -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+          aria-controls="offcanvasNavbar">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Navbar Menu -->
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link active" href="index.html">Ana Sayfa</a>
+            </li>
+
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="about.html">Kurumsal</a>
+
+              <ul class="dropdown-menu custom-hover-dropdown-menu">
+                <li><a class="dropdown-item" href="#">Firma Profili</a></li>
+                <li><a class="dropdown-item" href="#">Vizyon</a></li>
+                <li><a class="dropdown-item" href="#">Misyon</a></li>
+                <li>
+                  <a class="dropdown-item" href="#">Kalite Politikası</a>
+                </li>
+              </ul>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="products.html">Ürünler</a>
+            </li>
+
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="media.html">Medya</a>
+
+              <ul class="dropdown-menu custom-hover-dropdown-menu">
+                <li><a class="dropdown-item" href="#">Fotoğraflar</a></li>
+                <li><a class="dropdown-item" href="#">Videolar</a></li>
+              </ul>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">İletişim</a>
+            </li>
+
+            <!-- Language Switcher Dropdown -->
+            <li class="nav-item dropdown">
+              <a class="nav-link language-switcher" role="button" data-bs-toggle="dropdown" aria-expanded="false"
+                href="#">
+                <img src="assets/flags/turkey.webp" class="img-fluid size-sm" alt="" />
+              </a>
+
+              <div class="language-switcher dropdown-menu">
+                <div class="d-flex flex-column">
+                  <a class="nav-link" href="#">
+                    <img src="assets/flags/united-kingdom.webp" class="img-fluid size-sm" alt="" /></a>
+                  <a class="nav-link" href="#">
+                    <img src="assets/flags/russia.webp" class="img-fluid size-sm" alt="" /></a>
+                  <a class="nav-link" href="#">
+                    <img src="assets/flags/germany.webp" class="img-fluid size-sm" alt="" /></a>
+                </div>
+              </div>
+            </li>
+            <!-- Language Switcher Dropdown End -->
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Offcanvas Mobile Menu -->
+  <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+    <div class="custom-container navbar-h">
+      <a class="navbar-brand" href="#">
+        <img src="assets/logo.svg" class="size-4xl" alt="" />
+        <img src="assets/logo-2-dark.svg" class="size-4xl ms-2" alt="" />
+      </a>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+      <ul class="navbar-nav mb-5">
+        <li class="nav-item">
+          <a class="nav-link text-c4 fw-semibold fs-md" href="#">
+            <svg class="" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
+              viewBox="0 0 24 24">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="m9 5 7 7-7 7" />
+            </svg>
+            Ana Sayfa</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-c4 fw-semibold fs-md" href="#">
+            <svg class="" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
+              viewBox="0 0 24 24">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="m9 5 7 7-7 7" />
+            </svg>
+            Kurumsal</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-c4 fw-semibold fs-md" href="#">
+            <svg class="" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
+              viewBox="0 0 24 24">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="m9 5 7 7-7 7" />
+            </svg>
+            Ürünler</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-c4 fw-semibold fs-md" href="#">
+            <svg class="" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
+              viewBox="0 0 24 24">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="m9 5 7 7-7 7" />
+            </svg>
+            Kalite</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-c4 fw-semibold fs-md" href="#">
+            <svg class="" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
+              viewBox="0 0 24 24">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="m9 5 7 7-7 7" />
+            </svg>
+            Medya</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-c4 fw-semibold fs-md" href="#">
+            <svg class="" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
+              viewBox="0 0 24 24">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="m9 5 7 7-7 7" />
+            </svg>
+            İletişim</a>
+        </li>
+      </ul>
+      <div class="d-flex flex-column gap-xs">
+        <div class="d-flex gap-xs">
+          <button class="custom-btn-reset rounded-full border-c5 text-c5 w-100">
+            <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none"
+              viewBox="0 0 24 24">
+              <path stroke="currentColor" stroke-linecap="round" stroke-width="2"
+                d="m21 21-3.5-3.5M17 10a7 7 0 1 1-14 0 7 7 0 0 1 14 0Z" />
+            </svg>
+
+            Ürün Ara
+          </button>
+          <button class="custom-btn-reset rounded-full border-c5 text-c5 w-100">
+            <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none"
+              viewBox="0 0 24 24">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M9 10V6a3 3 0 0 1 3-3v0a3 3 0 0 1 3 3v4m3-2 .917 11.923A1 1 0 0 1 17.92 21H6.08a1 1 0 0 1-.997-1.077L6 8h12Z" />
+            </svg>
+            Teklif Al
+          </button>
+        </div>
+        <!-- Language Switcher Dropdown -->
+        <div>
+          <button
+            class="nav-link language-switcher w-100 input-h border-c4 text-c4 justify-content-between bg-transparent px-2"
+            role="button" data-bs-toggle="collapse" data-bs-target="#languageCollapseMenu" aria-expanded="false"
+            aria-controls="languageCollapseMenu" type="button">
+            <img src="assets/flags/turkey.webp" class="img-fluid size-md" alt="" />
+            <span class="fw-semibold fs-md">TR</span>
+            <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none"
+              viewBox="0 0 24 24">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="m19 9-7 7-7-7" />
+            </svg>
+          </button>
+
+          <div class="collapse language-switcher" id="languageCollapseMenu">
+            <div class="d-flex flex-column gap-md">
+              <a class="nav-link text-c4 fw-semibold fs-md gap-sm" href="#">
+                <img src="assets/flags/united-kingdom.webp" class="img-fluid size-md" alt="" />
+                <span>EN</span></a>
+              <a class="nav-link text-c4 fw-semibold fs-md gap-sm" href="#">
+                <img src="assets/flags/russia.webp" class="img-fluid size-md" alt="" />
+                <span>RU</span></a>
+              <a class="nav-link text-c4 fw-semibold fs-md gap-sm" href="#">
+                <img src="assets/flags/germany.webp" class="img-fluid size-md" alt="" />
+                <span>DE</span></a>
+            </div>
+          </div>
+        </div>
+        <!-- Language Switcher Dropdown End -->
+      </div>
+    </div>
+  </div>
+
+  <div class="custom-navbar-gap"></div>
+
+  <!-- Banner -->
+  <div class="custom-container mb-3">
+    <div class="position-relative w-100 d-flex justify-content-start align-items-center">
+      <img src="assets/shutterstock_1936499983@2x.webp" class="img-fluid w-100 object-fit-cover border-c6 bg-c6" style="
+            min-height: 250px;
+            border-radius: 0 0 var(--post-rounded-2xl) var(--post-rounded-2xl);
+          " alt="" />
+      <p class="position-absolute text-c1 fs-3xl fw-bold text-shadow" style="left: 5rem">
+        Medya
+      </p>
+    </div>
+  </div>
+
+  <div class="custom-site-gap"></div>
+
+  <!-- News -->
+  <section class="custom-container">
+    <div class="w-100">
+      <!-- Head -->
+      <div class="w-100">
+        <p class="text-c6 fw-bold fs-3xl mb-5">Haberler</p>
+      </div>
+      <!-- Slider -->
+      <div class="swiper swiper-product-slider pt-0">
+        <div class="swiper-wrapper swiper-product-slider-wrapper">
+          <!-- 1 -->
+          <a href="product-details.html" class="swiper-slide text-decoration-none">
+            <img src="assets/shutterstock_2426323943@2x.webp" alt="Kulaklık"
+              class="img-fluid w-100 h-auto object-fit-cover rounded-2xl mb-2" />
+            <p class="text-c5 fw-semibold fs-2xl">Haber Başlığı 1</p>
+            <p class="text-c3 fs-md">
+              Firmamız güçlü, güvenli, kaliteli ilkeleriyle 1983 yılında
+              bobinaj atölyesi olarak şirketimizin kurucusu Mehmet KARASAKAL
+              tarafından kurulmuştur. Aradan geçen yıllarda firmamız hızla
+              büyüy
+            </p>
+          </a>
+          <!---->
+          <a href="product-details.html" class="swiper-slide text-decoration-none">
+            <img src="assets/shutterstock_2426323943@2x.webp" alt="Kulaklık"
+              class="img-fluid w-100 h-auto object-fit-cover rounded-2xl mb-2" />
+            <p class="text-c5 fw-semibold fs-2xl">Haber Başlığı 1</p>
+            <p class="text-c3 fs-md">
+              Firmamız güçlü, güvenli, kaliteli ilkeleriyle 1983 yılında
+              bobinaj atölyesi olarak şirketimizin kurucusu Mehmet KARASAKAL
+              tarafından kurulmuştur. Aradan geçen yıllarda firmamız hızla
+              büyüy
+            </p>
+          </a>
+          <a href="product-details.html" class="swiper-slide text-decoration-none">
+            <img src="assets/shutterstock_2426323943@2x.webp" alt="Kulaklık"
+              class="img-fluid w-100 h-auto object-fit-cover rounded-2xl mb-2" />
+            <p class="text-c5 fw-semibold fs-2xl">Haber Başlığı 1</p>
+            <p class="text-c3 fs-md">
+              Firmamız güçlü, güvenli, kaliteli ilkeleriyle 1983 yılında
+              bobinaj atölyesi olarak şirketimizin kurucusu Mehmet KARASAKAL
+              tarafından kurulmuştur. Aradan geçen yıllarda firmamız hızla
+              büyüy
+            </p>
+          </a>
+          <a href="product-details.html" class="swiper-slide text-decoration-none">
+            <img src="assets/shutterstock_2426323943@2x.webp" alt="Kulaklık"
+              class="img-fluid w-100 h-auto object-fit-cover rounded-2xl mb-2" />
+            <p class="text-c5 fw-semibold fs-2xl">Haber Başlığı 1</p>
+            <p class="text-c3 fs-md">
+              Firmamız güçlü, güvenli, kaliteli ilkeleriyle 1983 yılında
+              bobinaj atölyesi olarak şirketimizin kurucusu Mehmet KARASAKAL
+              tarafından kurulmuştur. Aradan geçen yıllarda firmamız hızla
+              büyüy
+            </p>
+          </a>
+          <a href="product-details.html" class="swiper-slide text-decoration-none">
+            <img src="assets/shutterstock_2426323943@2x.webp" alt="Kulaklık"
+              class="img-fluid w-100 h-auto object-fit-cover rounded-2xl mb-2" />
+            <p class="text-c5 fw-semibold fs-2xl">Haber Başlığı 1</p>
+            <p class="text-c3 fs-md">
+              Firmamız güçlü, güvenli, kaliteli ilkeleriyle 1983 yılında
+              bobinaj atölyesi olarak şirketimizin kurucusu Mehmet KARASAKAL
+              tarafından kurulmuştur. Aradan geçen yıllarda firmamız hızla
+              büyüy
+            </p>
+          </a>
+          <a href="product-details.html" class="swiper-slide text-decoration-none">
+            <img src="assets/shutterstock_2426323943@2x.webp" alt="Kulaklık"
+              class="img-fluid w-100 h-auto object-fit-cover rounded-2xl mb-2" />
+            <p class="text-c5 fw-semibold fs-2xl">Haber Başlığı 1</p>
+            <p class="text-c3 fs-md">
+              Firmamız güçlü, güvenli, kaliteli ilkeleriyle 1983 yılında
+              bobinaj atölyesi olarak şirketimizin kurucusu Mehmet KARASAKAL
+              tarafından kurulmuştur. Aradan geçen yıllarda firmamız hızla
+              büyüy
+            </p>
+          </a>
+          <a href="product-details.html" class="swiper-slide text-decoration-none">
+            <img src="assets/shutterstock_2426323943@2x.webp" alt="Kulaklık"
+              class="img-fluid w-100 h-auto object-fit-cover rounded-2xl mb-2" />
+            <p class="text-c5 fw-semibold fs-2xl">Haber Başlığı 1</p>
+            <p class="text-c3 fs-md">
+              Firmamız güçlü, güvenli, kaliteli ilkeleriyle 1983 yılında
+              bobinaj atölyesi olarak şirketimizin kurucusu Mehmet KARASAKAL
+              tarafından kurulmuştur. Aradan geçen yıllarda firmamız hızla
+              büyüy
+            </p>
+          </a>
+          <a href="product-details.html" class="swiper-slide text-decoration-none">
+            <img src="assets/shutterstock_2426323943@2x.webp" alt="Kulaklık"
+              class="img-fluid w-100 h-auto object-fit-cover rounded-2xl mb-2" />
+            <p class="text-c5 fw-semibold fs-2xl">Haber Başlığı 1</p>
+            <p class="text-c3 fs-md">
+              Firmamız güçlü, güvenli, kaliteli ilkeleriyle 1983 yılında
+              bobinaj atölyesi olarak şirketimizin kurucusu Mehmet KARASAKAL
+              tarafından kurulmuştur. Aradan geçen yıllarda firmamız hızla
+              büyüy
+            </p>
+          </a>
+          <!---->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="custom-site-gap"></div>
+
+  <!-- Photos -->
+  <section class="custom-container">
+    <div class="w-100">
+      <!-- Head -->
+      <div class="w-100">
+        <p class="text-c6 fw-bold fs-3xl mb-5">Fotoğraflar</p>
+      </div>
+
+      <!-- Slider -->
+      <div class="swiper swiper-product-slider pt-0">
+        <div class="swiper-wrapper swiper-product-slider-wrapper">
+          <!-- Fotoğraf 1 -->
+          <a href="assets/shutterstock_2426323943@2x.webp" data-fancybox="gallery-photos"
+            data-caption="Üretim Tesisimiz - Genel Bakış" class="swiper-slide text-decoration-none">
+            <img src="assets/shutterstock_2426323943@2x.webp" alt="Üretim Tesisi"
+              class="img-fluid w-100 h-auto object-fit-cover rounded-2xl mb-2" />
+          </a>
+
+          <!-- Fotoğraf 2 (Örnek Çoğaltma) -->
+          <a href="assets/shutterstock_2426323943@2x.webp" data-fancybox="gallery-photos"
+            data-caption="Ar-Ge Laboratuvarı" class="swiper-slide text-decoration-none">
+            <img src="assets/shutterstock_2426323943@2x.webp" alt="Ar-Ge"
+              class="img-fluid w-100 h-auto object-fit-cover rounded-2xl mb-2" />
+          </a>
+
+          <!-- Fotoğraf 3 (Örnek Çoğaltma) -->
+          <a href="assets/shutterstock_2426323943@2x.webp" data-fancybox="gallery-photos" data-caption="Montaj Hattı"
+            class="swiper-slide text-decoration-none">
+            <img src="assets/shutterstock_2426323943@2x.webp" alt="Montaj"
+              class="img-fluid w-100 h-auto object-fit-cover rounded-2xl mb-2" />
+          </a>
+
+          <!-- Fotoğraf 4 (Örnek Çoğaltma) -->
+          <a href="assets/shutterstock_2426323943@2x.webp" data-fancybox="gallery-photos" data-caption="Lojistik Depo"
+            class="swiper-slide text-decoration-none">
+            <img src="assets/shutterstock_2426323943@2x.webp" alt="Lojistik"
+              class="img-fluid w-100 h-auto object-fit-cover rounded-2xl mb-2" />
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="custom-site-gap"></div>
+
+  <!-- Footer -->
+  <section class="custom-container">
+    <div class="w-100">
+      <!-- Head -->
+      <div class="d-flex flex-column flex-xl-row justify-content-between align-items-center gap-md">
+        <div class="d-flex align-items-center gap-sm">
+          <img src="assets/logo.svg" class="size-5xl" alt="" />
+          <img src="assets/logo-2-dark.svg" class="size-5xl" alt="" />
+        </div>
+        <div class="d-flex align-items-center gap-md">
+          <a href="">
+            <img src="assets/icons/instagram.svg" class="size-lg" alt="" />
+          </a>
+          <a href="">
+            <img src="assets/icons/facebook.svg" class="size-lg" alt="" />
+          </a>
+          <a href="">
+            <img src="assets/icons/linkedin.svg" class="size-lg" alt="" />
+          </a>
+          <a href="">
+            <img src="assets/icons/square-x-twitter.svg" class="size-lg" alt="" />
+          </a>
+        </div>
+      </div>
+      <!-- Main -->
+      <div class="d-flex flex-wrap w-100 justify-content-between gap-md" style="
+            margin-block: var(--post-gap-2xl);
+            padding-block: var(--post-gap-4xl);
+            border-top: 1px solid var(--post-c5);
+            border-bottom: 1px solid var(--post-c5);
+          ">
+        <!-- info -->
+        <div class="d-flex flex-column gap-sm w-100 text-c6 fs-lg mb-5" style="max-width: 500px">
+          <p class="text-c6 fs-2xl mb-0">Müşterilerimiz</p>
+          <p class="text-c6 fw-bold fs-3xl">Referansımızdır</p>
+          <a href="#" class="custom-btn-reset text-c2 bg-c4 w-fit">Konumumuzu Gör</a>
+        </div>
+        <!-- 1 -->
+        <div class="d-flex flex-column gap-xl w-100 text-c6 fs-lg mb-5" style="max-width: 300px">
+          <p class="fw-semibold fs-xl mb-0">Kurumsal</p>
+          <a href="" class="text-decoration-none text-c6">Hakkımızda</a>
+          <a href="" class="text-decoration-none text-c6">Misyonumuz</a>
+          <a href="" class="text-decoration-none text-c6">Vizyonumuz</a>
+          <a href="" class="text-decoration-none text-c6">Üretim</a>
+        </div>
+        <!-- 2 -->
+        <div class="d-flex flex-column gap-xl w-100 mb-5" style="max-width: 300px">
+          <p class="fw-semibold fs-xl mb-0">Kurumsal</p>
+          <a href="" class="text-decoration-none text-c6">Hakkımızda</a>
+          <a href="" class="text-decoration-none text-c6">Misyonumuz</a>
+          <a href="" class="text-decoration-none text-c6">Vizyonumuz</a>
+          <a href="" class="text-decoration-none text-c6">Üretim</a>
+        </div>
+        <!-- 3 -->
+        <div class="d-flex flex-column gap-xl w-100 mb-5" style="max-width: 300px">
+          <p class="fw-semibold fs-xl mb-0">Kurumsal</p>
+          <a href="" class="text-decoration-none text-c6">Hakkımızda</a>
+          <a href="" class="text-decoration-none text-c6">Misyonumuz</a>
+          <a href="" class="text-decoration-none text-c6">Vizyonumuz</a>
+          <a href="" class="text-decoration-none text-c6">Üretim</a>
+        </div>
+        <!-- 4 -->
+        <div class="d-flex flex-column gap-xl w-100 mb-5" style="max-width: 300px">
+          <p class="fw-semibold fs-xl mb-0">Kurumsal</p>
+          <a href="" class="text-decoration-none text-c6">Hakkımızda</a>
+          <a href="" class="text-decoration-none text-c6">Misyonumuz</a>
+          <a href="" class="text-decoration-none text-c6">Vizyonumuz</a>
+          <a href="" class="text-decoration-none text-c6">Üretim</a>
+        </div>
+      </div>
+      <!-- Copyright -->
+      <div class="d-flex flex-column flex-xl-row justify-content-between align-items-center gap-md"
+        style="padding-bottom: var(--post-gap-xl)">
+        <p class="text-c6 fs-md">© 2025 Konya Motor | Her Hakkı Saklıdır.</p>
+        <img src="assets/post-logo.svg" alt="" />
+      </div>
+    </div>
+  </section>
+
+  <!-- Bootstrap 5 JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <!-- Fancybox JS -->
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.umd.js"></script>
+  <!-- Custom JS -->
+  <script src="custom.js"></script>
+</body>
+
+</html>
