@@ -6,7 +6,7 @@
 
 ---
 
-## 📷 Demo Links
+## 📷 Demo Link
 
 - [GitHub Pages](https://xkintaro.github.io/konya-motor-html-ui/)
 
